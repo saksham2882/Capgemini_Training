@@ -1,0 +1,71 @@
+SELECT * FROM emp;
+
+
+-- ----- QUESTION 1 --------
+-- SELECT SUM(SAL) AS TOTAL_SAL, JOB
+-- FROM emp
+-- GROUP BY JOB;
+
+
+
+-- ----- QUESTION 2 --------
+-- SELECT HIREDATE, COUNT(*) AS C
+-- FROM emp
+-- GROUP BY HIREDATE 
+-- HAVING C >= 3;
+
+
+
+-- ----- QUESTION 3 --------
+-- SELECT DEPTNO, COUNT(*) AS EMP_NO, SUM(SAL) AS MONTHLY_SAL
+-- FROM emp
+-- GROUP BY DEPTNO
+-- HAVING MONTHLY_SAL > 9000;
+
+
+
+-- ----- QUESTION 4 --------
+-- SELECT DEPTNO, COUNT(*) AS EMP_WORK, AVG(SAL) AS AVG_SAL 
+-- FROM emp
+-- WHERE SAL < COMM
+-- GROUP BY DEPTNO;
+
+
+
+-- ----- QUESTION 5 --------
+-- SELECT COUNT(*) AS C, SAL
+-- FROM emp
+-- GROUP BY SAL
+-- HAVING C > 1;
+
+
+
+-- ----- QUESTION 6 --------
+-- SELECT ENAME
+-- FROM emp
+-- GROUP BY ENAME
+-- HAVING COUNT(ENAME) > 1;
+
+
+
+-- ----- QUESTION 7 --------
+-- SELECT DEPTNO, AVG(SAL) AS AVG_SAL
+-- FROM emp
+-- GROUP BY DEPTNO
+-- HAVING AVG_SAL BETWEEN 2500 AND 3000;
+
+
+
+-- ----- QUESTION 8 --------
+-- SELECT DEPTNO, COUNT(*) AS C
+-- FROM emp
+-- WHERE JOB = 'MANAGER' OR JOB = 'ANALYST' AND SAL * 12 LIKE '%0'
+-- GROUP BY DEPTNO;
+
+
+
+-- ----- QUESTION 9 --------
+-- SELECT COUNT(JOB), DEPTNO
+-- FROM emp
+-- WHERE JOB = 'CLERK'
+-- GROUP BY DEPTNO;

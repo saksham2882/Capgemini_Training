@@ -1,0 +1,85 @@
+SELECT * FROM emp;
+
+
+-- ----- QUESTION 1 --------
+-- SELECT DEPTNO, JOB, COUNT(*) AS C
+-- FROM emp
+-- WHERE JOB = 'CLERK'
+-- GROUP BY DEPTNO
+-- HAVING C >= 2;
+
+
+
+-- ----- QUESTION 2 --------
+-- SELECT DEPTNO, SUM(SAL) AS TOTAL_SAL
+-- FROM emp
+-- GROUP BY DEPTNO
+-- HAVING COUNT(*) >= 4;
+
+
+
+-- ----- QUESTION 3 --------
+-- SELECT COUNT(*) AS SAL_MORE_THAN_1200, JOB
+-- FROM emp
+-- WHERE SAL > 1200
+-- GROUP BY JOB
+-- HAVING SUM(SAL) > 3800;
+
+
+
+-- ----- QUESTION 4 --------
+-- SELECT DEPTNO, COUNT(*) AS C, JOB
+-- FROM emp
+-- WHERE JOB = 'MANAGER'
+-- GROUP BY DEPTNO
+-- HAVING C = 2;
+
+
+
+-- ----- QUESTION 5 --------
+-- SELECT JOB, MAX(SAL) AS SALARY
+-- FROM emp
+-- GROUP BY JOB
+-- HAVING SALARY > 2600;
+
+
+
+-- ----- QUESTION 6 --------
+-- SELECT COUNT(*) AS C, SAL
+-- FROM emp
+-- GROUP BY SAL
+-- HAVING C > 1;
+
+
+
+-- ----- QUESTION 7 --------
+-- SELECT COUNT(*) AS HIRE_DATE, HIREDATE
+-- FROM emp
+-- GROUP BY HIREDATE
+-- HAVING HIRE_DATE > 1;
+
+
+
+-- ----- QUESTION 8 --------
+-- SELECT AVG(SAL) AS AVG_SAL, DEPTNO
+-- FROM emp
+-- GROUP BY DEPTNO
+-- HAVING AVG_SAL < 3000;
+
+
+
+-- ----- QUESTION 9 --------
+-- SELECT DEPTNO, COUNT(ENAME) AS C
+-- FROM emp
+-- WHERE ENAME LIKE '%A%' OR ENAME LIKE '%S%'
+-- GROUP BY DEPTNO
+-- HAVING C >= 3;
+
+
+
+-- ----- QUESTION 10 --------
+-- SELECT MIN(SAL) AS MIN_SAL, MAX(SAL) AS MAX_SAL, JOB
+-- FROM emp
+-- GROUP BY JOB
+-- HAVING MIN_SAL > 1000 AND MAX_SAL < 5000;
+
