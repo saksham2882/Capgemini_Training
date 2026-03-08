@@ -1,0 +1,36 @@
+# IntelliJ files
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Build folders
+target/
+build/
+out/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+
+# Compiled files
+*.class
+
+# Maven wrapper
+.mvn/wrapper/maven-wrapper.jar
+
+
+# Package files
+*.jar
+*.war
+*.ear
+
+# Temporary files
+*.tmp
+*.swp
