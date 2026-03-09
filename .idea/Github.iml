@@ -16,6 +16,8 @@
       <sourceFolder url="file://$MODULE_DIR$/Multithreading/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/DSA_Practice/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Java_Collections_Framework/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Assignments/Assignment_06_Funtional_Interface/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/JPA_Hibernate_Mapping/src" isTestSource="false" />
     </content>
   </component>
 </module>
