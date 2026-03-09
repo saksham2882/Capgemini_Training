@@ -14,6 +14,8 @@
       <sourceFolder url="file://$MODULE_DIR$/JUnit/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Java_8_Features/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Multithreading/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/DSA_Practice/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Java_Collections_Framework/src" isTestSource="false" />
     </content>
   </component>
 </module>
