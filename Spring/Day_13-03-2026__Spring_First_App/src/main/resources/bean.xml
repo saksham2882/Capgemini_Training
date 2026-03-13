@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context" xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"> <!-- bean definitions here -->
+
+<!--    used to enable the Annotations based (Field) Injection   -->
+       <context:annotation-config />
+
+<!--       <bean id="hello" class="com.cg.bean.HelloWorld" scope="prototype" />-->
+       <bean id="hello" class="com.cg.bean.HelloWorld" scope="singleton" >
+
+              <!--  -->
+              <property name="name" value="Rohit"></property>
+<!--              <constructor-arg name="name" value="riya" ></constructor-arg>-->
+
+              <property name="language">
+                     <list>
+                            <value>Hindi</value>
+                            <value>English</value>
+                            <value>Korean</value>
+                     </list>
+
+<!--                     <set>-->
+<!--                            <value>Hindi</value>-->
+<!--                            <value>English</value>-->
+<!--                            <value>Korean</value>-->
+<!--                     </set>-->
+              </property>
+       </bean>
+
+
+       <!-- Using the Setter Injection -->
+<!--       <bean id="employee" class="com.cg.bean.Employee">-->
+<!--       <bean id="employee" class="com.cg.bean.Employee" autowire="byType">-->
+       <bean id="employee" class="com.cg.bean.Employee" autowire="byName">
+              <property name="empId" value="101"></property>
+              <property name="name" value="John"></property>
+<!--              <property name="address" ref="address"></property>-->
+       </bean>
+
+       <bean id="address" class="com.cg.bean.Address">
+              <property name="city" value="Seoul"></property>
+              <property name="country" value="Korea"></property>
+              <property name="zip" value="12673"></property>
+       </bean>
+       <bean id="add" class="com.cg.bean.Address">
+              <property name="city" value="New York"></property>
+              <property name="country" value="USA"></property>
+              <property name="zip" value="2865"></property>
+       </bean>
+       <bean id="add1" class="com.cg.bean.Address">
+              <property name="city" value="Moscow"></property>
+              <property name="country" value="Russia"></property>
+              <property name="zip" value="76343"></property>
+       </bean>
+
+
+
+       <!-- Using the Constructor Injection -->
+<!--       <bean id="employee" class="com.cg.bean.Employee">-->
+<!--              <constructor-arg name="empId" value="101"></constructor-arg>-->
+<!--              <constructor-arg name="name" value="John"></constructor-arg>-->
+<!--              <constructor-arg name="address" ref="address"></constructor-arg>-->
+<!--       </bean>-->
+
+<!--       <bean id="address" class="com.cg.bean.Address">-->
+<!--              <constructor-arg name="city" value="Seoul"></constructor-arg>-->
+<!--              <constructor-arg name="country" value="Korea"></constructor-arg>-->
+<!--              <constructor-arg name="zip" value="12673"></constructor-arg>-->
+<!--       </bean>-->
+</beans>
