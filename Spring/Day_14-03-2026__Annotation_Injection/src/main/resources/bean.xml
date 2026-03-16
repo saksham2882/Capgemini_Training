@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context" xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"> <!-- bean definitions here -->
+
+    <context:annotation-config />
+
+<!--    <bean id="jk" class="com.cg.bean1.JKTyre" />-->
+<!--    <bean id="mrf" class="com.cg.bean1.MRFTyre" />-->
+<!--    <bean id="petrol" class="com.cg.bean1.PetrolEngine" />-->
+<!--    <bean id="cng" class="com.cg.bean1.CNGEngine" />-->
+
+    <!-- Setter Injection -->
+<!--    <bean id="car" class="com.cg.bean1.Car">-->
+<!--        <property name="name" value="Honda-City" />-->
+<!--        <constructor-arg name="engine" ref="petrol" />-->
+<!--        <constructor-arg name="tyre" ref="tyre" />-->
+<!--    </bean>-->
+
+
+<!--    <context:component-scan base-package="com" />-->
+    <context:component-scan base-package="com.cg.bean1" />
+<!-- NOTE: create the object of Classes which is marked as "@Component" in the package-"com.cg.bean1"   -->
+
+    <context:property-placeholder location="classpath:data.properties" />
+</beans>
