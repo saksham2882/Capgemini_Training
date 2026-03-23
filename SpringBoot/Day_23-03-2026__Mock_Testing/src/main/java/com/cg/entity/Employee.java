@@ -1,0 +1,64 @@
+package com.cg.entity;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+import java.time.LocalDate;
+
+
+@Entity
+public class Employee {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int empId;
+    private String name;
+    @JsonFormat(pattern = "dd-MMM-yyyy")
+    private LocalDate dob;
+    private Double salary;
+
+
+    public Employee(){}
+
+    public Employee(String name, LocalDate dob, Double salary) {
+        this.name = name;
+        this.dob = dob;
+        this.salary = salary;
+    }
+
+    // NOTE:  Getter and Setter must be present here for the 'jackson' to convert the data into the JSON.
+
+    public int getEmpId() {
+        return empId;
+    }
+
+    public void setEmpId(int empId) {
+        this.empId = empId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public LocalDate getDob() {
+        return dob;
+    }
+
+    public void setDob(LocalDate dob) {
+        this.dob = dob;
+    }
+
+    public Double getSalary() {
+        return salary;
+    }
+
+    public void setSalary(Double salary) {
+        this.salary = salary;
+    }
+}
